@@ -1,0 +1,51 @@
+[
+    {
+      "title": "Event Planning and Coordination",
+      "image": "event_planning.jpg",
+      "price": "$1,500 - $5,000",
+      "description": "Comprehensive event planning services including venue selection, logistics management, and scheduling to ensure a successful corporate event.",
+      "button_color": "#007BFF",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "title": "Customized Event Design",
+      "image": "event_design.jpg",
+      "price": "$800 - $3,000",
+      "description": "Create unique and visually appealing event themes and decorations tailored to your client's corporate branding and objectives.",
+      "button_color": "#FF6B6B",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "title": "Speaker and Content Management",
+      "image": "speaker_management.jpg",
+      "price": "$2,000 - $7,500",
+      "description": "Identify and secure keynote speakers, workshop facilitators, and content creation to engage and inform event attendees.",
+      "button_color": "#28A745",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "title": "Registration and Ticketing",
+      "image": "registration.jpg",
+      "price": "$500 - $2,000",
+      "description": "User-friendly online registration and ticketing system that streamlines the process for event organizers and attendees.",
+      "button_color": "#FFC107",
+      "text_color": "#212529"
+    },
+    {
+      "title": "Audiovisual and Technology Support",
+      "image": "audiovisual_support.jpg",
+      "price": "$1,200 - $4,500",
+      "description": "Provide state-of-the-art audiovisual equipment, live streaming solutions, and technical support for smooth presentations and interactions during events.",
+      "button_color": "#6C757D",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "title": "Post-Event Evaluation and Reporting",
+      "image": "post_event_evaluation.jpg",
+      "price": "$900 - $3,500",
+      "description": "Gather feedback from attendees, analyze event data, and create comprehensive reports to measure the success of corporate events.",
+      "button_color": "#6610F2",
+      "text_color": "#FFFFFF"
+    }
+  ]
+  
