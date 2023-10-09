@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../providers/AuthProvider";
-import { signInWithPopup } from "firebase/auth";
-import auth from "../../firebase/firebase.config";
+import { AuthContext } from  "../.././Providers/AuthProvider";
+// import { signInWithPopup } from "firebase/auth";
+// import auth from "../../firebase/firebase.config";
 const Login = () => {
 
     const {signInUser, signInWithGoogle} = useContext(AuthContext)
@@ -31,12 +31,12 @@ const Login = () => {
   
     return (
       <div>
-        <div className="hero min-h-screen bg-base-200">
-          <div className="hero-content flex flex-col">
-            <div className="text-center">
+        <div className="bg-base-200">
+          <div className="flex flex-col items-center justify-center space-y-10">
+            <div className="mt-10">
               <h1 className="text-5xl font-bold">Login now!</h1>
             </div>
-            <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 p-4">
+            <div className="border border-red-500 w-1/2  bg-orange-400	p-4">
               <form onSubmit={handleLogin} className="card-body">
                 <div className="form-control">
                   <label className="label">
@@ -68,11 +68,11 @@ const Login = () => {
                   </label>
                 </div>
                 <div className="form-control mt-6">
-                  <button className="btn btn-primary">Login</button>
+                  <button className="btn btn-secondary">Login</button>
                 </div>
               </form>
               <p className="text-center ">New Here?  Please <Link to='/register'><button className="btn btn-link">Register</button></Link></p>
-                <p> <button onClick={handleGoogle} className="btn btn-ghost"> Sign In with Google</button></p>
+              <p className="text-center"> <button onClick={handleGoogle} className="btn btn-ghost"> Sign In with Google</button></p>
             </div>
           </div>
         </div>
