@@ -6,6 +6,7 @@ import Home from "../Pages/HomePage/Home/Home";
 import About from "../Pages/About/About";
 import Navservices from "../Pages/Navservices/Navservices";
 import Blog from "../Pages/Blog/Blog";
+import PrivateRoutes from "./PrivateRoutes";
 export const router = createBrowserRouter([
     {
       path: "/",
@@ -26,7 +27,7 @@ export const router = createBrowserRouter([
         },
         {
           path: '/about',
-          element: <About></About>
+          element: <PrivateRoutes><About></About></PrivateRoutes>
         },
         {
           path: '/services',
@@ -35,7 +36,7 @@ export const router = createBrowserRouter([
         },
         {
           path: '/blog',
-          element: <Blog></Blog>
+          element: <PrivateRoutes><Blog></Blog></PrivateRoutes>
         }
       ]
     },
