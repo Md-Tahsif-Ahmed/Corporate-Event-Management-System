@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
@@ -14,18 +16,33 @@ const Register = () => {
     const password = e.target.password.value;
     console.log(name, photo, email, password);
 
-    // Check if createUser is a valid function
+    if(password.length < 6){
+        toast('The password is less than 6 characters');
+    }
+    else if(!/[A-Z]/.test(password)){
+        toast('Do not have a capital letter');
+    }
+    else if (!/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)){
+        toast('Do not have a special character');
+    }
+
+   else{
+     // Check if createUser is a valid function
     
       // Create user in Firebase
       createUser(name, photo, email, password)
         .then((result) => {
           console.log("User registered:", result.user);
+          toast('Successful Registration');
+
       
         })
         .catch((error) => {
           console.error("Registration error:", error);
+          toast('Registration error');
         });
     
+   }
   };
 
   return (
@@ -101,6 +118,7 @@ const Register = () => {
           </div>
         </div>
       </div>
+      <ToastContainer /> 
     </div>
   );
 };

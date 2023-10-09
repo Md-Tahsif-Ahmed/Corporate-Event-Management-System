@@ -1,32 +1,39 @@
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { AuthContext } from  "../.././Providers/AuthProvider";
-// import { signInWithPopup } from "firebase/auth";
-// import auth from "../../firebase/firebase.config";
+import { AuthContext } from "../../Providers/AuthProvider";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
+
 const Login = () => {
+  const { signInUser, signInWithGoogle } = useContext(AuthContext);
+  const navigate = useNavigate();
 
-    const {signInUser, signInWithGoogle} = useContext(AuthContext)
-    const navigate = useNavigate();
-    
-    const handleLogin = (e) => {
-      e.preventDefault();
-      const email = e.target.email.value;  
-      const password = e.target.password.value;  
-      console.log(email, password);
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log(email, password);
 
-      signInUser(email, password)
-      .then(result=>{console.log(result.user)
-                        e.target.reset();
-                        navigate('/');
-    }
-      )
-      .catch(error=>{console.error(error)})
-    };
+    signInUser(email, password)
+      .then(result => {
+        console.log(result.user);
+        e.target.reset();
+        navigate('/');
+        toast.success('Successful Login');
+      })
+      .catch(error => {
+        console.error(error);
+        toast.error('Login error');  
+      });
+  };
 
     const handleGoogle =()=>{
          signInWithGoogle()
          .then(result=>{console.log(result.user)})
-         .catch(error=>console.error(error))
+         .catch((error)=> {
+          console.error(error);
+         toast('Login error');
+        });
     }
   
     return (
@@ -76,6 +83,7 @@ const Login = () => {
             </div>
           </div>
         </div>
+        <ToastContainer /> 
       </div>
     );
   };

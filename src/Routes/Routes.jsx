@@ -8,6 +8,7 @@ import Navservices from "../Pages/Navservices/Navservices";
 import Blog from "../Pages/Blog/Blog";
 import PrivateRoutes from "./PrivateRoutes";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import Details from "../Pages/HomePage/Services/Details";
 export const router = createBrowserRouter([
     {
       path: "/",
@@ -38,8 +39,13 @@ export const router = createBrowserRouter([
         },
         {
           path: '/blog',
-          element: <PrivateRoutes><Blog></Blog></PrivateRoutes>
-        }
+          element: <PrivateRoutes><Blog></Blog></PrivateRoutes>,
+        },
+        {
+          path: '/details/:id',
+          element: <PrivateRoutes><Details></Details></PrivateRoutes>,
+          loader: () => fetch('services.json'),
+        },
       ]
     },
   ]);

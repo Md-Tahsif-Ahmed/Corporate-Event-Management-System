@@ -6,7 +6,7 @@ import icon from "../../../assets/icon.png"
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
-    console.log('hi',user);
+   
     const handleLogOut = ()=>{
         logOut()
         .then(() => {
