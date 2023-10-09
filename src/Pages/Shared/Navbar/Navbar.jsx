@@ -19,35 +19,38 @@ const Navbar = () => {
        <NavLink to='/' style={({ isActive }) => {
     return {
       textDecoration: isActive ? "underline" : "",
-      color: isActive ? "red" : "",
+      color: isActive ? "purple" : "",
     };
   }}>Home</NavLink>
-       <NavLink to='/about' style={({ isActive }) => {
-    return {
-      textDecoration: isActive ? "underline" : "",
-      color: isActive ? "red" : "",
-    };
-  }}>About Us</NavLink>
+       
        <NavLink to='/services' style={({ isActive }) => {
     return {
       textDecoration: isActive ? "underline" : "",
-      color: isActive ? "red" : "",
+      color: isActive ? "purple" : "",
     };
   }}>Services</NavLink>
+  <NavLink to='/register' style={({ isActive }) => {
+    return {
+      textDecoration: isActive ? "underline" : "",
+      color: isActive ? "purple" : "",
+    };
+  }}>SignUp</NavLink>
        {
             user && <>
                 <NavLink to='/blog' style={({ isActive }) => {
     return {
       textDecoration: isActive ? "underline" : "",
-      color: isActive ? "red" : "",
+      color: isActive ? "purple" : "",
     };
   }}>Blog</NavLink>
-                <NavLink to='/clients' style={({ isActive }) => {
+
+<NavLink to='/about' style={({ isActive }) => {
     return {
       textDecoration: isActive ? "underline" : "",
-      color: isActive ? "red" : "",
+      color: isActive ? "purple" : "",
     };
-  }}>Clients</NavLink>
+  }}>About Us</NavLink>
+                
             </>
         }
    </>
