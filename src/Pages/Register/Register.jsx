@@ -9,14 +9,15 @@ const Register = () => {
     e.preventDefault();  
 
     const name = e.target.name.value;
+    const photo = e.target.photo.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(name, email, password);
+    console.log(name, photo, email, password);
 
     // Check if createUser is a valid function
     
       // Create user in Firebase
-      createUser(email, password)
+      createUser(name, photo, email, password)
         .then((result) => {
           console.log("User registered:", result.user);
       
@@ -38,7 +39,7 @@ const Register = () => {
             <form onSubmit={handleRegister} className="card-body">
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Your Name</span>
+                        <span className="label-text">Name</span>
                     </label>
                     <input 
                         type="text" 
@@ -57,18 +58,7 @@ const Register = () => {
                     className="input input-bordered" required 
                     />
                 </div>
-                <div className="form-control">
-                    <label className="label">
-                    <span className="label-text">Name</span>
-                    </label>
-                    <input
-                    type="text"
-                    name="name"
-                    placeholder="Your Name"
-                    className="input input-bordered"
-                    required
-                    />
-                </div>
+                 
               <div className="form-control">
                     <label className="label">
                     <span className="label-text">Email</span>

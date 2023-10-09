@@ -36,7 +36,7 @@ const Login = () => {
             <div className="mt-10">
               <h1 className="text-5xl font-bold">Login now!</h1>
             </div>
-            <div className="border border-red-500 w-1/2  bg-orange-400	p-4">
+            <div className="w-1/2  bg-orange-400	p-4">
               <form onSubmit={handleLogin} className="card-body">
                 <div className="form-control">
                   <label className="label">
