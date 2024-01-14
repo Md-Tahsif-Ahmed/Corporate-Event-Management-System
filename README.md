@@ -1,4 +1,4 @@
-# React + Vite
+Live Link: https://striped-opinion.surge.sh
 
  <h1>Corporate Event Management </h1>
  <p>features and functionalities of the website</p>
