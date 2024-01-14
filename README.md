@@ -1,7 +1,7 @@
 Live Link: https://striped-opinion.surge.sh
 
  <h1>Corporate Event Management </h1>
- <p>features and functionalities of the website</p>
+ <h4>Features and functionalities of the website</h4>
  <ol>
    <li>This website is user Authenticated with firebase</li>
    <li>User can signup and signin to show some private feature</li>
